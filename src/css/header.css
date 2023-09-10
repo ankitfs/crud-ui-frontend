@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    background: blue;
+    padding: 1.5em 1.5em;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+.navbar li{
+    list-style: none;
+    float: left;
+}
+
+.navbar li a {
+    text-decoration: none;
+    padding: 30px 20px;
+    color: #fff;
+}
+
+.navbar li a:hover {
+    background: gray;
+}
+
+.showcase {
+    background-image: url('../img/ems-portfolio-background.jpg');
+    background-size: cover;
+    height: 150px;
+    color: white;
+}
+
+.showcase h2 {
+    text-align: center;
+    padding-top: 3.5rem;
+}

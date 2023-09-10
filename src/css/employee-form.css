@@ -1,0 +1,36 @@
+.add-employee h2 {
+    text-align: center;
+    margin: 10px 0;
+    color: green;
+}
+
+.employee-form {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.form-input-div label {
+    border: 1px solid lightgray;
+    width: 30%;
+    padding: 5px 20px;
+    text-align: left;
+}
+
+.form-input-div input, select {
+    width: 40%;
+    padding: 5px 5px;
+}
+
+
+.form-submit-div button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label, input {
+    display: inline-block;
+}

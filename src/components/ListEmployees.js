@@ -1,43 +1,38 @@
 import { Link } from "react-router-dom";
+import '../css/common.css';
 
 
-const ListEmployees = () => {
+const ListEmployees = (props) => {
 
-    const employeesListArray = [
-        {id : 1, name : "Ankit", email : "ankit@gmail.com"},
-        {id : 2, name : "Rahul", email : "rahul@gmail.com"},
-        {id : 3, name : "Sachin", email : "sachin@gmail.com"},
-        {id : 4, name : "Sunil", email : "sunil@gmail.com"}
-    ]
+    
+
+    const employeesListArray = props.employeeArray;
 
     return (
-        <div>
-            <Link to="/addemployee">Add Employee</Link>
-        <div align="center">            
-            <div>Page for List Employees</div>
-            <table border={1}>
-                <thead>
-                    <td>ID</td>
-                    <td>Name</td>
-                    <td>Email</td>
-                </thead>
-                <tbody>
+        <div className="employee-list">
+            <h3><Link to="/addemployee">Add Employee</Link></h3>
+            <div className="emp-container">            
+                <div className="table-header">
+                    <div className="row">ID</div>
+                    <div className="row">Name</div>
+                    <div className="row">Email</div>
+                </div>
+                
             {   employeesListArray.length > 0 &&
                 employeesListArray.map((emp, index) => 
-                    <tr key={index}>
-                        <td>{emp.id}</td>    
-                        <td>{emp.name}</td>
-                        <td>{emp.email}</td>
-                    </tr>
+                    <div className="column" key={index}>
+                        <div className="row">{emp.id}</div>    
+                        <div className="row">{emp.name}</div>
+                        <div className="row">{emp.email}</div>
+                    </div>
                 )
             }
             {
                 employeesListArray.length === 0 &&
-                <tr><td colSpan={3}>No Rows Found</td></tr>
+                <div className="column"><div className="row">No Rows Found</div></div>
             }
-                </tbody>
-            </table>
-        </div>
+                
+            </div>
         </div>
     )
 }
