@@ -20,7 +20,7 @@ const EmployeeForm = (props) => {
         employeeData.id = inputEmpIdRef.current.value;
         employeeData.name = inputNameRef.current.value;
         employeeData.email = inputEmailRef.current.value;
-        employeeData.department = inputDepartmentRef.current.value;
+        employeeData.department = inputDepartmentRef.current[inputDepartmentRef.current.selectedIndex].innerText;
         employeeData.salary = inputSalaryRef.current.value;
 
         //calling the parent component handler function to add employee
@@ -36,7 +36,7 @@ const EmployeeForm = (props) => {
             <form class="employee-form" onSubmit={submitHandler}>
                 <div className="form-input-div">
                     <label>ID *:</label>
-                    <input type="text" ref={inputEmpIdRef}/>
+                    <input type="number" ref={inputEmpIdRef}/>
                 </div>
                 <div className="form-input-div">
                     <label>Name *:</label>

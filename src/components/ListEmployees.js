@@ -16,6 +16,8 @@ const ListEmployees = (props) => {
                     <div className="row">ID</div>
                     <div className="row">Name</div>
                     <div className="row">Email</div>
+                    <div className="row">Department</div>
+                    <div className="row">Salary</div>
                 </div>
                 
             {   employeesListArray.length > 0 &&
@@ -24,6 +26,8 @@ const ListEmployees = (props) => {
                         <div className="row">{emp.id}</div>    
                         <div className="row">{emp.name}</div>
                         <div className="row">{emp.email}</div>
+                        <div className="row">{emp.department}</div>
+                        <div className="row">{emp.salary}</div>
                     </div>
                 )
             }
